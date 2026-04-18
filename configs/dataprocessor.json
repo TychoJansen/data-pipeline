@@ -1,0 +1,17 @@
+{
+    "use_cols": [],
+    "datetime_cols": [],
+    "sort_col": "",
+    "string_cols": {
+        "patterns": {
+            "remove_characters": "",
+            "remove_tags": "",
+            "remove_extra_whitespace": ""
+        },
+        "columns": {}
+    },
+    "fillna": {
+        "Summary": ""
+    },
+    "drop_duplicates": true
+}

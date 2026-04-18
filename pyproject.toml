@@ -1,0 +1,38 @@
+[project]
+name = "data-pipeline"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Tycho Jansen",email = "tycho.jansen@live.nl"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas (>=3.0.2,<4.0.0)",
+    "pathlib (>=1.0.1,<2.0.0)",
+    "pytest (>=9.0.3,<10.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest-cov (>=7.1.0,<8.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "pyarrow (>=23.0.1,<24.0.0)"
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=data_pipeline --cov-report=term-missing --cov-fail-under=100"
+
+[tool.coverage.run]
+source = ["data_pipeline"]
+
+[tool.coverage.report]
+include = [
+    "data_pipeline/*",
+    "*/data_pipeline/*"
+]

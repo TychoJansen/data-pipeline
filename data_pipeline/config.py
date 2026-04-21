@@ -101,10 +101,7 @@ class Config:
         Raises:
             FileNotFoundError: If the file is not found within the given levels.
         """
-        try:
-            start_dir = os.path.dirname(os.path.abspath(__file__))
-        except NameError:
-            start_dir = os.getcwd()
+        start_dir = os.getcwd()
 
         dir_to_search = start_dir
         for _ in range(search_levels):
